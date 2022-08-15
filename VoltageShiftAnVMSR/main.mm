@@ -144,15 +144,24 @@ void printBits(size_t const size, void const * const ptr)
     for (i=size-1;i>=0;i--)
     {
         
+         printf("%u", b);
+         printf(": ");
+        
         for (j=7;j>=0;j--)
         {
             byte = (b[i] >> j) & 1;
+         
             printf("%u", byte);
         }
-        if (i!=0)
+        
+        if (i!=0) 
+        {
             printf(" ");
-        else
-        puts(")");
+		}
+        else 
+        {
+			puts(")");
+		}
     }
    // puts(" )");
 }
